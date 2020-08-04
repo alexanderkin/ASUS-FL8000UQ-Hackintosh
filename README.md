@@ -26,8 +26,8 @@
 7. 电量显示正常
 8. 触控板
 9. 睡眠和唤醒
-## 三、一键开启HIDPI项目地址：[one-key-hidpi](https://github.com/xzhih/one-key-hidpi)
-macOS Big Sur请使用[原版镜像生成ISO文件和一键开启HIDPI](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1862620&highlight=HIDPI)来开启HIDPI
+## 三、一键开启HIDPI项目地址：`[one-key-hidpi](https://github.com/xzhih/one-key-hidpi)`
+macOS Big Sur请使用`[原版镜像生成ISO文件和一键开启HIDPI](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1862620&highlight=HIDPI)`来开启HIDPI
 ## 四、关于F5~F12的问题。
 已添加SSDT加载苹果F5~F12按键功能，不再使用Fn组合键。  
 |    按键   |        功能            |
