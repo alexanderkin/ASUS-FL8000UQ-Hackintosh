@@ -47,7 +47,7 @@ macOS Big Sur请使用[`原版镜像生成ISO文件和一键开启HIDPI`](http:/
 1.BIOS309无法安装的问题已经修复，不需要再在win10里面禁用“更新不包括驱动程序”了。  
 2.安装完成后请使用Hackintool重新定制USB以解决睡眠问题：[USB定制教程](https://blog.daliansky.net/Intel-FB-Patcher-USB-Custom-Video.html)   
 3.OpenCore关闭"Msic->ShowPicker"后可在开机过程中在ASUS标志出来后用alt键来显示启动菜单，笔记本自带键盘需要长按alt键，外接键盘需要不断点按alt键。  
-4.Windows+Mac双系统推荐使用NDK-OpenCore，对windows没有影响。原版OpenCore可能导致windows激活信息丢失。
+4.Windows+Mac双系统推荐使用NDK-OpenCore，对windows没有影响。原版OpenCore可能导致windows激活信息丢失。  
 5.macOS Big Sur在安装过程中如果出现内核崩溃情况只需要清理一次NVRAM即可。
 
 ## 六、HDMI注意事项
