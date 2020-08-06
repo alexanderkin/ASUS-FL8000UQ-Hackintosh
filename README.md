@@ -12,7 +12,7 @@
 |     声卡      |       Realtek ALC294        |
 |   无线网卡     |        BCM943602CS      |
 
-关于拆机卡BCM943602CS和BCM943602CDP导致在关机状态下拔插电源适配器电脑自动开机的情况，第一种方法是屏蔽拆机卡的第13针脚，屏蔽后即可解决此问题，第二种方法是屏蔽转接卡的第54针和第55针，同样可以解决此问题。强烈推荐DW1820A-08PKF4版本，无需屏蔽针脚，稳定运行。
+关于拆机卡BCM943602CS和BCM943602CDP导致在关机状态下拔插电源适配器电脑自动开机的情况，第一种方法是屏蔽拆机卡的第13针脚，屏蔽后即可解决此问题，第二种方法是屏蔽转接卡的第54针和第55针，同样可以解决此问题。推荐使用DW1820A-08PKF4版本，无需屏蔽针脚，稳定运行。
 
 ![2.png](https://github.com/KKKIIINNN/ASUS-FL8000UQ-Hackintosh/blob/master/screenshot/2.png)
 
@@ -48,7 +48,8 @@ macOS Big Sur请使用[`原版镜像生成ISO文件和一键开启HIDPI`](http:/
 2.安装完成后请使用Hackintool重新定制USB以解决睡眠问题：[USB定制教程](https://blog.daliansky.net/Intel-FB-Patcher-USB-Custom-Video.html)   
 3.OpenCore关闭"Msic->ShowPicker"后可在开机过程中在ASUS标志出来后用alt键来显示启动菜单，笔记本自带键盘需要长按alt键，外接键盘需要不断点按alt键。  
 4.Windows+Mac双系统推荐使用NDK-OpenCore，对windows没有影响。原版OpenCore可能导致windows激活信息丢失。  
-5.macOS Big Sur在安装过程中如果出现内核崩溃情况只需要清理一次NVRAM即可。
+5.macOS Big Sur在安装过程中如果出现内核崩溃情况只需要清理一次NVRAM即可。  
+6.由于现在的OC重命名较多，请尽量不要使用OC引导Windows，否则可能会出现意外情况。
 
 ## 六、HDMI注意事项
 此电脑在BIOS中打开CSM兼容选项就可以在外接显示器中显示BIOS和Clover界面以及开机过程，但如果用外接显示器开机，那么黑苹果内屏将无法使用，但是10.14 Mojave中在clover里加上“igfxcflbklt=1”启动参数，开机后将笔记本盖子合上再打开即可同时使用内外屏，但注意，加上此启动参数后亮度调节将失效。此方法在10.15 Catalina中无效，所以建议10.15 Catalina不要打开CSM兼容模式，用内屏来开机，等黑苹果完全启动即可使用外屏。
