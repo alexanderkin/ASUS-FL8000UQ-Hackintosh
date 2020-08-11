@@ -1,4 +1,4 @@
-# macOS Mojave/Catalina/Big Sur Beta For ASUS-FL8000UQ-Hackintosh
+# macOS Mojave/Catalina/Big Sur For ASUS-FL8000UQ-Hackintosh
 
 ## 一、配置：
 
