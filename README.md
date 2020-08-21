@@ -50,6 +50,7 @@ macOS Big Sur请使用[`原版镜像生成ISO文件和一键开启HIDPI`](http:/
 4.Windows+Mac双系统推荐使用NDK-OpenCore，对windows没有影响。原版OpenCore可能导致windows激活信息丢失。  
 5.macOS Big Sur在安装过程中如果出现内核崩溃情况只需要清理一次NVRAM即可。  
 6.由于现在的OC重命名较多，请尽量不要使用OC引导Windows，否则可能会出现意外情况。
+7.DW1820A需要先屏蔽针脚，因为EFI文件中如果没有驱动的话会导致进系统禁行，卡顿等，进入系统驱动完成后就可以不用屏蔽针脚了。
 
 ## 六、HDMI注意事项
 此电脑在BIOS中打开CSM兼容选项就可以在外接显示器中显示BIOS和Clover界面以及开机过程，但如果用外接显示器开机，那么黑苹果内屏将无法使用，但是10.14 Mojave中在clover里加上“igfxcflbklt=1”启动参数，开机后将笔记本盖子合上再打开即可同时使用内外屏，但注意，加上此启动参数后亮度调节将失效。此方法在10.15 Catalina中无效，所以建议10.15 Catalina不要打开CSM兼容模式，用内屏来开机，等黑苹果完全启动即可使用外屏。
