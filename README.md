@@ -1,5 +1,19 @@
 # macOS Mojave/Catalina/Big Sur For ASUS-FL8000UQ-Hackintosh
 
+# BIOS设置：
+
+- 关闭`SecureBoot`
+
+- 关闭`FastBoot`
+
+- 解锁`CFG Lock`
+
+  1.将U盘格式化为FAT32格式；
+
+  2.打开CFG文件夹，将里面的EFI文件复制到U盘中，重启按ESC键选择U盘启动；
+
+  3.输入命令`setup_var_3 0x527 0x00`即可解锁CFG Lock。（注意，0x527仅适用于FL8000UQ，UN或NF请进入[`XIN's BLOG`](https://blog.xjn819.com/)中搜索`解锁BIOS中的CFG功能`,按照教程自行查找数值。)
+
 ## 一、配置：
 
 |    配置       |        型号                 |
