@@ -1,5 +1,6 @@
 # macOS Mojave/Catalina/Big Sur For ASUS-FL8000UQ-Hackintosh
 
+# 本人精力有限，以后不再更新，各位可以基于我的EFI基础上自行修改更新
 # BIOS设置：
 
 - 关闭`SecureBoot`
