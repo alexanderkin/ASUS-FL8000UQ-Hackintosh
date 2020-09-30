@@ -12,7 +12,7 @@
 
   2.打开CFG文件夹，将里面的EFI文件复制到U盘中，重启按ESC键选择U盘启动；
 
-  3.输入命令`setup_var_3 0x527 0x00`即可解锁CFG Lock。（注意，0x527适用于UQ和UF，UN请进入[`XIN's BLOG`](https://blog.xjn819.com/)中搜索`解锁BIOS中的CFG功能`,按照教程自行查找数值。)
+  3.输入命令`setup_var_3 0x527 0x00`即可解锁CFG Lock。
 
 ## 一、配置：
 
