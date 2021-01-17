@@ -71,10 +71,6 @@ macOS Big Sur请使用[`原版镜像生成ISO文件和一键开启HIDPI`](http:/
 此电脑在BIOS中打开CSM兼容选项就可以在外接显示器中显示BIOS和Clover界面以及开机过程，但如果用外接显示器开机，那么黑苹果内屏将无法使用，但是10.14 Mojave中在clover里加上“igfxcflbklt=1”启动参数，开机后将笔记本盖子合上再打开即可同时使用内外屏，但注意，加上此启动参数后亮度调节将失效。此方法在10.15 Catalina中无效，所以建议10.15 Catalina不要打开CSM兼容模式，用内屏来开机，等黑苹果完全启动即可使用外屏。
 ## ~~七、关于睡眠过程中自动唤醒解决方案~~(貌似没啥用)
 当电脑出现自动唤醒后，打开终端输入 log show --last 1d | grep "Wake reason" 找到唤醒电脑的设备，然后在DSDT中搜索对应的设备，将设备下面的_PRW方法注释掉即可。
-## 八、本机NVRAM在Mac下可以正常使用，不需要再模拟NVRAM。如果使用OpenCore引导，就可以可在偏好设置中使用“启动磁盘”来设置默认启动项。
-如何测试是否支持NVRAM:  
-1.终端输入  sudo nvram 1212=1  后重启；  
-2.重启后打开终端输入  nvram -p | grep 1212  ，如果输出1212   1，即NVRAM工作正常，否则不正常；  
-3.测试完后终端输入  sudo nvram -d 1212  来删除自定义变量。
+## 八、本机NVRAM在Mac下可以正常使用，可以可在偏好设置中使用“启动磁盘”来设置默认启动项。
 ## 九、截图
 ![1.png](https://github.com/KKKIIINNN/ASUS-FL8000UQ-Hackintosh/blob/master/screenshot/1.png)  
