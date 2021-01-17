@@ -33,7 +33,7 @@
 ## 二、正常工作
 1. CPU变频
 2. 核显硬件加速，独显无法驱动已做屏蔽
-3. 声卡输出（~~自编译AppleALC驱动~~  已合并至AppleALC官方项目，LayoutID=66）
+3. 声卡输出（~~自编译AppleALC驱动~~  已合并至[`AppleALC`](https://github.com/acidanthera/AppleALC)，LayoutID=66）
 4. HDMI输出
 5. USB
 6. WIFI/蓝牙(已更换BCM943602CS,原装AR9565可驱动,有需要可去远景论坛查找）
@@ -58,13 +58,14 @@ macOS Big Sur请使用[`原版镜像生成ISO文件和一键开启HIDPI`](http:/
 
 如果需要用到这些按键原本的功能的话，可以删除ACPI文件下的SSDT-Fkey.aml,然后使用Karabiner Elements来进行键位调整，这样就能在使用原本功能的同时也支持Mac的功能。
 ## 五、注意事项
-1.BIOS309无法安装的问题已经修复，不需要再在win10里面禁用“更新不包括驱动程序”了。  
-2.安装完成后请使用Hackintool重新定制USB以解决睡眠问题：[`USB定制教程`](https://blog.daliansky.net/Intel-FB-Patcher-USB-Custom-Video.html)   
-3.OpenCore关闭"Msic->ShowPicker"后可在开机过程中在ASUS标志出来后用alt键来显示启动菜单，笔记本自带键盘需要长按alt键，外接键盘需要不断点按alt键。  
-4.Windows+Mac双系统推荐使用NDK-OpenCore，对windows没有影响。原版OpenCore可能导致windows激活信息丢失。  
-5.macOS Big Sur在安装过程中如果出现内核崩溃情况只需要清理一次NVRAM即可。  
-6.由于现在的OC重命名较多，请尽量不要使用OC引导Windows，否则可能会出现意外情况。  
-7.DW1820A需要先屏蔽针脚，因为EFI文件中如果没有驱动的话会导致进系统禁行，卡顿等，进入系统驱动完成后就可以不用屏蔽针脚了。
+1.下载的EFI请替换其中的三码后再使用，防止出现冲突。 
+2.BIOS309无法安装的问题已经修复，不需要再在win10里面禁用“更新不包括驱动程序”了。  
+3.安装完成后请使用Hackintool重新定制USB以解决睡眠问题：[`USB定制教程`](https://blog.daliansky.net/Intel-FB-Patcher-USB-Custom-Video.html)   
+4.OpenCore关闭"Msic->ShowPicker"后可在开机过程中在ASUS标志出来后用alt键来显示启动菜单，笔记本自带键盘需要长按alt键，外接键盘需要不断点按alt键。  
+5.Windows+Mac双系统推荐使用NDK-OpenCore，对windows没有影响。原版OpenCore可能导致windows激活信息丢失。  
+6.macOS Big Sur在安装过程中如果出现内核崩溃情况只需要清理一次NVRAM即可。  
+7.由于现在的OC重命名较多，请尽量不要使用OC引导Windows，否则可能会出现意外情况。  
+8.DW1820A需要先屏蔽针脚，因为EFI文件中如果没有驱动的话会导致进系统禁行，卡顿等，进入系统驱动完成后就可以不用屏蔽针脚了。
 
 ## 六、HDMI注意事项
 此电脑在BIOS中打开CSM兼容选项就可以在外接显示器中显示BIOS和Clover界面以及开机过程，但如果用外接显示器开机，那么黑苹果内屏将无法使用，但是10.14 Mojave中在clover里加上“igfxcflbklt=1”启动参数，开机后将笔记本盖子合上再打开即可同时使用内外屏，但注意，加上此启动参数后亮度调节将失效。此方法在10.15 Catalina中无效，所以建议10.15 Catalina不要打开CSM兼容模式，用内屏来开机，等黑苹果完全启动即可使用外屏。
