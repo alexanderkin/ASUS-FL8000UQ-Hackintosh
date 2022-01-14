@@ -72,5 +72,3 @@ macOS Big Sur请使用[`原版镜像生成ISO文件和一键开启HIDPI`](http:/
 ## ~~七、关于睡眠过程中自动唤醒解决方案~~(貌似没啥用)
 当电脑出现自动唤醒后，打开终端输入 log show --last 1d | grep "Wake reason" 找到唤醒电脑的设备，然后在DSDT中搜索对应的设备，将设备下面的_PRW方法注释掉即可。
 ## 八、本机NVRAM在Mac下可以正常使用，可以可在偏好设置中使用“启动磁盘”来设置默认启动项。
-## 九、截图
-![1.png](https://github.com/KKKIIINNN/ASUS-FL8000UQ-Hackintosh/blob/master/screenshot/1.png)  
